@@ -2,6 +2,17 @@ import React from "react";
 import "./SAHotspotMap.css"; // we'll add styles next
 import { ReactComponent as SouthAfricaMap } from "./SouthAfricaMapProvinces.svg";
 
+const provinceSeverity = {
+  "ZA-GT": "high",
+  "ZA-KZN": "high",
+  "ZA-WC": "medium",
+  "ZA-EC": "medium",
+  "ZA-NC": "low",
+  "ZA-FS": "low",
+  "ZA-LP": "low",
+  "ZA-MP": "low",
+  "ZA-NW": "low"
+};
 
 // Dummy hotspot data (replace later with real data)
 const hotspots = [
@@ -14,11 +25,13 @@ const hotspots = [
 function SAHotspotMap() {
   return (
     <div className="map-container">
-      {/* Placeholder map image - replace with SVG or Leaflet later */}
       <SouthAfricaMap className="map-svg" 
         onClick={(e) => {
           const province = e.target.id;
-          alert(`Data for ${province} will be available once government records are integrated.`);
+          if (province) {
+            alert(`Data for ${province} will be available once government records are integrated.`);
+          }
+
        }}
 
       />
