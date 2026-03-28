@@ -1,13 +1,30 @@
 .map-container {
   position: relative;
-  width: 700px;
-  height: 600px;
-  margin: 20px auto;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.map-svg {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .map {
   width: 100%;
   height: auto;
+}
+
+.hotspot {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: red;
+  border-radius: 50%;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
 }
 
 .hotspot {
@@ -26,26 +43,42 @@
   100% { transform: scale(1); opacity: 1; }
 }
 
-/* Example: Gauteng glowing red */
+/* Gauteng red glow */
 #ZA-GT {
-  fill: red;
-  animation: glow 2s infinite;
+  animation: gautengGlow 2s infinite;
 }
 
-@keyframes glow {
+@keyframes gautengGlow {
   0% { fill: rgba(255,0,0,0.6); }
   50% { fill: rgba(255,0,0,1); }
   100% { fill: rgba(255,0,0,0.6); }
 }
 
-/* Example: Western Cape ripple effect */
+/* Western Cape ripple effect */
 #ZA-WC {
-  fill: orange;
-  animation: ripple 3s infinite;
+  animation: westernCapeRipple 3s infinite;
 }
 
-@keyframes ripple {
-  0% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.2); opacity: 0.7; }
-  100% { transform: scale(1); opacity: 1; }
+
+
+/* KwaZulu-Natal orange glow */
+#ZA-KZN {
+  animation: kwazuluNatalGlow 2s infinite;
+}
+
+@keyframes kwazuluNatalGlow {
+  0% { fill: rgba(255,165,0,0.6); }
+  50% { fill: rgba(255,165,0,1); }
+  100% { fill: rgba(255,165,0,0.6); }
+}
+
+/* Eastern Cape purple pulse */
+#ZA-EC {
+  animation: easternCapePulse 1.5s infinite;
+}
+
+@keyframes easternCapePulse {
+  0% { fill: rgba(128,0,128,0.6); }
+  50% { fill: rgba(128,0,128,1); }
+  100% { fill: rgba(128,0,128,0.6); }
 }

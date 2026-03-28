@@ -1,6 +1,6 @@
 import React from "react";
 import "./SAHotspotMap.css"; // we'll add styles next
-import { ReactComponent as SouthAfricaMap } from "./South_Africa_adm_location_map.svg";
+import { ReactComponent as SouthAfricaMap } from "./SouthAfricaMapProvinces.svg";
 
 
 // Dummy hotspot data (replace later with real data)
