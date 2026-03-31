@@ -39,7 +39,7 @@
 
 /* High prevalence provinces (red pulse) */
 #ZA-GT, #ZA-KZN {
-  fill: red;
+  fill: #FF0000;
   animation: pulseHigh 2s infinite;
 }
 
@@ -49,26 +49,83 @@
   100% { fill: rgba(255,0,0,0.6); }
 }
 
-/* Medium prevalence provinces (orange glow) */
+/* Medium prevalence provinces (deep orange glow) */
 #ZA-WC, #ZA-EC {
-  fill: orange;
+  fill: #FF6600;
   animation: pulseMedium 3s infinite;
 }
 
 @keyframes pulseMedium {
-  0% { fill: rgba(255,165,0,0.6); }
-  50% { fill: rgba(255,165,0,1); }
-  100% { fill: rgba(255,165,0,0.6); }
+  0% { fill: rgba(255,102,0,0.6); }
+  50% { fill: rgba(255,102,0,1); }
+  100% { fill: rgba(255,102,0,0.6); }
 }
 
-/* Low prevalence provinces (yellow shimmer) */
+/* Low prevalence provinces (light orange shimmer) */
 #ZA-NC, #ZA-FS, #ZA-LP, #ZA-MP, #ZA-NW {
-  fill: yellow;
+  fill: #FFCC66;
   animation: pulseLow 4s infinite;
 }
 
 @keyframes pulseLow {
-  0% { fill: rgba(255,255,0,0.6); }
-  50% { fill: rgba(255,255,0,1); }
-  100% { fill: rgba(255,255,0,0.6); }
+  0% { fill: rgba(255,204,102,0.6); }
+  50% { fill: rgba(255,204,102,1); }
+  100% { fill: rgba(255,204,102,0.6); }
 }
+
+/* Tooltip styling */
+.tooltip {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,0.85);
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* Popup styling */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 320px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.popup-content h3 {
+  margin-top: 0;
+  color: #FF6600;
+}
+
+
+.popup-content button {
+  margin-top: 12px;
+  padding: 8px 14px;
+  background: #FF6600;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+
+
