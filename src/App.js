@@ -4,7 +4,7 @@ import WelcomeMessage from "./components/WelcomeMessage";
 import SearchBar from "./components/SearchBar";
 import ResultCard from "./components/ResultCard";
 import SAHotspotMap from "./components/SAHotspotMap";
-
+import NewsFeed from "./components/NewsFeed";
 
 
 function App() {
@@ -32,7 +32,7 @@ function App() {
         <SearchBar onSearch={handleSearch} />
         <ResultCard record={result} />
         <SAHotspotMap />
-
+        <NewsFeed />
     </div>
   );
 }
