@@ -7,6 +7,7 @@ import ResultCard from "./components/ResultCard";
 import SAHotspotMap from "./components/SAHotspotMap";
 import NewsFeed from "./components/NewsFeed";
 import ReportForm from "./components/ReportForm";
+import SupportCompanion from "./components/SupportCompanion";
 
 function App() {
   const [result, setResult] = useState(null);
@@ -56,10 +57,13 @@ function App() {
 
       {currentPage === "support" && (
         <div>
-          <h2>Support Bot</h2>
-          <p>Coming soon — a safe space for guided exercises and counselling resources.</p>
+          <h2>Support Companion</h2>
+          <p>A safe space for guided exercises and counselling resources.</p>
         </div>
       )}
+
+      {/* SupportCompanion floats in the corner on ALL pages */}
+      <SupportCompanion />
     </div>
   );
 }

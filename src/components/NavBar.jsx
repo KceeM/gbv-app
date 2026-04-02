@@ -28,7 +28,7 @@ function NavBar({ currentPage, setCurrentPage }) {
           className={currentPage === "support" ? "active" : ""} 
           onClick={() => setCurrentPage("support")}
         >
-          Support Bot
+          Support
         </li>
       </ul>
     </nav>
