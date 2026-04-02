@@ -1,0 +1,13 @@
+.report-info {
+  background-color: #1E1E1E;
+  color: #EAEAEA;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(155,48,255,0.4);
+}
+
+.report-info h3 {
+  color: #CBA6F7;
+  margin-bottom: 10px;
+}

@@ -9,6 +9,7 @@ import NewsFeed from "./components/NewsFeed";
 import ReportForm from "./components/ReportForm";
 import SupportCompanion from "./components/SupportCompanion";
 import SupportPage from "./components/SupportPage";
+import ReportInfo from "./components/ReportInfo";
 
 function App() {
   const [result, setResult] = useState(null);
@@ -51,6 +52,7 @@ function App() {
       {currentPage === "reports" && (
         <>
           <h2>Community Reports</h2>
+          <ReportInfo />
           <button onClick={() => setShowReportForm(true)}>Report an Incident</button>
           {showReportForm && <ReportForm onClose={() => setShowReportForm(false)} />}
         </>
