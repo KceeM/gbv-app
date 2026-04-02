@@ -1,20 +1,29 @@
 .news-feed {
   padding: 20px;
-  background: #f9f9f9;
+  background: #121212; /* dark background */
   max-width: 800px;
   margin: 0 auto;
+  border-radius: 10px;
 }
 
+/* Each article card */
 .news-item {
   display: flex;
   align-items: flex-start;
   margin-bottom: 20px;
   padding: 12px;
   border-radius: 8px;
-  background: #fff;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  background: #1e1e1e; /* dark card */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+.news-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(155,48,255,0.4); /* purple glow */
+}
+
+/* Article image */
 .news-image {
   width: 120px;
   height: 80px;
@@ -23,23 +32,27 @@
   margin-right: 15px;
 }
 
+/* Text styling */
 .news-text h3 {
   margin: 0;
   font-size: 18px;
-  color: #FF6600;
+  color: #CBA6F7; /* lavender heading */
 }
 
 .news-text p {
   margin: 6px 0;
-  color: #333;
+  color: #ddd; /* light gray text */
   font-size: 14px;
 }
 
+/* Links */
 .news-text a {
-  color: #0066cc;
+  color: #9B30FF; /* royal purple link */
   text-decoration: none;
   font-weight: bold;
 }
+
 .news-text a:hover {
   text-decoration: underline;
+  color: #CBA6F7; /* lighter purple on hover */
 }

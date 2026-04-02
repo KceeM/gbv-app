@@ -37,40 +37,40 @@
   cursor: pointer;
 }
 
-/* High prevalence provinces (red pulse) */
+/* High prevalence provinces (deep violet pulse) */
 #ZA-GT, #ZA-KZN {
-  fill: #FF0000;
+  fill: #6A0DAD;
   animation: pulseHigh 2s infinite;
 }
 
 @keyframes pulseHigh {
-  0% { fill: rgba(255,0,0,0.6); }
-  50% { fill: rgba(255,0,0,1); }
-  100% { fill: rgba(255,0,0,0.6); }
+  0% { fill: rgba(106,13,173,0.6); }
+  50% { fill: rgba(106,13,173,1); }
+  100% { fill: rgba(106,13,173,0.6); }
 }
 
-/* Medium prevalence provinces (deep orange glow) */
+/* Medium prevalence provinces (royal purple glow) */
 #ZA-WC, #ZA-EC {
-  fill: #FF6600;
+  fill: #9B30FF;
   animation: pulseMedium 3s infinite;
 }
 
 @keyframes pulseMedium {
-  0% { fill: rgba(255,102,0,0.6); }
-  50% { fill: rgba(255,102,0,1); }
-  100% { fill: rgba(255,102,0,0.6); }
+  0% { fill: rgba(155,48,255,0.6); }
+  50% { fill: rgba(155,48,255,1); }
+  100% { fill: rgba(155,48,255,0.6); }
 }
 
-/* Low prevalence provinces (light orange shimmer) */
+/* Low prevalence provinces (lavender shimmer) */
 #ZA-NC, #ZA-FS, #ZA-LP, #ZA-MP, #ZA-NW {
-  fill: #FFCC66;
+  fill: #CBA6F7;
   animation: pulseLow 4s infinite;
 }
 
 @keyframes pulseLow {
-  0% { fill: rgba(255,204,102,0.6); }
-  50% { fill: rgba(255,204,102,1); }
-  100% { fill: rgba(255,204,102,0.6); }
+  0% { fill: rgba(203,166,247,0.6); }
+  50% { fill: rgba(203,166,247,1); }
+  100% { fill: rgba(203,166,247,0.6); }
 }
 
 /* Tooltip styling */
@@ -79,7 +79,8 @@
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
-  background: rgba(0,0,0,0.85);
+  background: rgba(50,0,80,0.85);
+  border: 1px solid #9B30FF;
   color: #fff;
   padding: 8px 12px;
   border-radius: 6px;
@@ -113,18 +114,20 @@
 
 .popup-content h3 {
   margin-top: 0;
-  color: #FF6600;
+  color: #9B30FF; /* royal purple */
 }
-
 
 .popup-content button {
   margin-top: 12px;
   padding: 8px 14px;
-  background: #FF6600;
+  background: #6A0DAD; /* deep violet */
   color: white;
   border: none;
   border-radius: 6px;
   cursor: pointer;
+}
+.popup-content button:hover {
+  background: #9B30FF;
 }
 
 
