@@ -1,0 +1,31 @@
+.support-page {
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  color: #EAEAEA;
+}
+
+.support-page h2 {
+  color: #CBA6F7;
+  margin-bottom: 10px;
+}
+
+.support-section {
+  background: #1E1E1E;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(155,48,255,0.4);
+}
+
+.support-section h3 {
+  color: #9B30FF;
+  margin-bottom: 8px;
+}
+
+.support-section img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin: 12px 0;
+  box-shadow: 0 0 8px rgba(106,13,173,0.6);
+}

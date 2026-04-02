@@ -8,6 +8,7 @@ import SAHotspotMap from "./components/SAHotspotMap";
 import NewsFeed from "./components/NewsFeed";
 import ReportForm from "./components/ReportForm";
 import SupportCompanion from "./components/SupportCompanion";
+import SupportPage from "./components/SupportPage";
 
 function App() {
   const [result, setResult] = useState(null);
@@ -55,12 +56,8 @@ function App() {
         </>
       )}
 
-      {currentPage === "support" && (
-        <div>
-          <h2>Support Companion</h2>
-          <p>A safe space for guided exercises and counselling resources.</p>
-        </div>
-      )}
+      {currentPage === "support" && <SupportPage />}
+
 
       {/* SupportCompanion floats in the corner on ALL pages */}
       <SupportCompanion />
