@@ -1,0 +1,53 @@
+.report-modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.7);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 1000;
+}
+
+.report-content {
+  background: #1E1E1E;
+  padding: 20px;
+  border-radius: 10px;
+  width: 320px;
+  color: #EAEAEA;
+  box-shadow: 0 0 12px rgba(155,48,255,0.6);
+}
+
+.report-content h2 {
+  color: #CBA6F7;
+}
+
+.report-content label {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+.report-content input,
+.report-content select,
+.report-content textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  border-radius: 6px;
+  border: 1px solid #9B30FF;
+  background: #121212;
+  color: #fff;
+}
+
+.report-content button {
+  margin-top: 12px;
+  padding: 8px 14px;
+  background: #6A0DAD;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.report-content button:hover {
+  background: #9B30FF;
+}
