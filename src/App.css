@@ -36,3 +36,40 @@
     transform: rotate(360deg);
   }
 }
+
+/* Global dark background */
+body {
+  margin: 0;
+  background: linear-gradient(180deg, #0D0D0D 0%, #1A0B2E 100%);
+  color: #EAEAEA;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Headings */
+h1, h2, h3 {
+  color: #CBA6F7; /* lavender */
+}
+
+/* Buttons */
+button {
+  background: #6A0DAD; /* deep violet */
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  background: #9B30FF; /* royal purple */
+  box-shadow: 0 0 10px rgba(155,48,255,0.6);
+}
+
+/* Cards / containers */
+.card {
+  background: #1E1E1E;
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
