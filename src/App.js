@@ -10,9 +10,11 @@ import ReportForm from "./components/ReportForm";
 import SupportCompanion from "./components/SupportCompanion";
 import SupportPage from "./components/SupportPage";
 import ReportInfo from "./components/ReportInfo";
+import DisclaimerBanner from "./components/DisclaimerBanner";
 
 function App() {
   const [result, setResult] = useState(null);
+  const [hasSearched, setHasSearched] = useState(false);
   const [currentPage, setCurrentPage] = useState("map"); // track which section is active
   const [showReportForm, setShowReportForm] = useState(false);
 
@@ -21,6 +23,7 @@ function App() {
     const fakeDatabase = [
       { name: "David Mokoena", status: "Convicted - Assault & Rape" },
       { name: "James Nkosi", status: "Pending Case - Under Investigation" },
+      { name: "Nathi Ngweni", status: "Confirmed - Anonymous Reports (3)" },
     ];
 
     const found = fakeDatabase.find(
@@ -28,7 +31,15 @@ function App() {
     );
 
     setResult(found || null);
+    setHasSearched(true);
+  
   };
+
+  const handleClearSearch = () => {
+    setResult(null);
+    setHasSearched(false);
+  };
+
 
   return (
     <div className="App">
@@ -41,8 +52,14 @@ function App() {
           <h1>GBV Registry App</h1>
           <p>Welcome to a safer future.</p>
           <WelcomeMessage />
-          <SearchBar onSearch={handleSearch} />
-          <ResultCard record={result} />
+          <SearchBar onSearch={handleSearch} onClear={handleClearSearch}/>
+          {/* Show result card OR fallback message */}
+          {result ? (
+            <ResultCard record={result} onClose={() => setResult(null)} />
+          ) : hasSearched ? (
+            <p className="no-results">No results found</p>
+          ) : null}
+
           <SAHotspotMap />
         </>
       )}
@@ -52,6 +69,7 @@ function App() {
       {currentPage === "reports" && (
         <>
           <h2>Community Reports</h2>
+          <DisclaimerBanner />
           <ReportInfo />
           <button onClick={() => setShowReportForm(true)}>Report an Incident</button>
           {showReportForm && <ReportForm onClose={() => setShowReportForm(false)} />}

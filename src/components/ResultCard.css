@@ -1,0 +1,106 @@
+.result-card {
+  background-color: #1e1e1e;
+  color: #eaeaea;
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin: 20px auto;
+  max-width: 500px;
+  box-shadow: 0 0 10px rgba(155, 48, 255, 0.3);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease;
+}
+
+.result-card:hover {
+  transform: scale(1.02);
+}
+
+.result-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.icon-placeholder {
+  background-color: #2a2a2a;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.status-line {
+  margin-top: 4px;
+  font-size: 0.95rem;
+}
+
+.tag {
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 0.85rem;
+}
+
+.tag-convicted {
+  background-color: #e53935;
+  color: white;
+}
+
+.tag-pending {
+  background-color: #ff9800;
+  color: white;
+}
+
+.tag-dropped {
+  background-color: #757575;
+  color: white;
+}
+
+.tag-confirmed {
+  background-color: #4caf50;
+  color: white;
+}
+
+.tag-flagged {
+  background-color: #9c27b0;
+  color: white;
+}
+
+.tag-default {
+  background-color: #616161;
+  color: white;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: #cba6f7;
+  font-size: 1.2rem;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  transition: color 0.2s ease;
+}
+
+.close-btn:hover {
+  color: #ff79c6;
+}
+
+.result-card {
+  position: relative;
+  background-color: #1e1e1e;
+  color: #eaeaea;
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin: 20px auto;
+  max-width: 500px;
+  box-shadow: 0 0 10px rgba(155, 48, 255, 0.3);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease;
+}
+

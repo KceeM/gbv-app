@@ -11,3 +11,59 @@
   color: #CBA6F7;
   margin-bottom: 10px;
 }
+
+.demo-section {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #2a2a2a;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(155,48,255,0.3);
+}
+
+.demo-section h3 {
+  color: #cba6f7;
+  margin-bottom: 10px;
+}
+
+.tag {
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  margin-left: 6px;
+}
+
+.tag.confirmed {
+  background-color: #4caf50;
+  color: white;
+}
+
+.tag.pending {
+  background-color: #ff9800;
+  color: white;
+}
+
+.tag.flagged {
+  background-color: #f44336;
+  color: white;
+}
+
+.demo-section img {
+  margin-top: 12px;
+  max-width: 100%;
+  border-radius: 6px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.4);
+}
+
+.demo-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.demo-grid img {
+  width: 800px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(155, 48, 255, 0.3);
+}

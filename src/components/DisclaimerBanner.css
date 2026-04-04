@@ -1,0 +1,14 @@
+.disclaimer-banner {
+  background-color: #3b0066;
+  color: #f3eaff;
+  padding: 12px 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+  box-shadow: 0 0 10px rgba(155, 48, 255, 0.4);
+  text-align: center;
+}
+
+.disclaimer-banner strong {
+  color: #cba6f7;
+}

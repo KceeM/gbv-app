@@ -1,12 +1,25 @@
 import React, { useState } from "react";
 
-function SearchBar({ onSearch }) {
+function SearchBar({ onSearch, onClear  }) {
   const [query, setQuery] = useState("");
+
+  const handleChange = (e) => {
+    const value = e.target.value;
+    setQuery(value);
+
+    if (value === "") {
+      onClear(); // ✅ clears result + hasSearched when input is empty
+    }
+  };
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onSearch(query);
+    if (query.trim() !== "") {
+      onSearch(query);
+    }
   };
+
 
   return (
     <form onSubmit={handleSubmit} className="search-bar">
@@ -14,7 +27,7 @@ function SearchBar({ onSearch }) {
         type="text"
         placeholder="Search by name..."
         value={query}
-        onChange={(e) => setQuery(e.target.value)}
+        onChange={handleChange}
       />
       <button type="submit">Search</button>
     </form>

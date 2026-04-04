@@ -24,6 +24,39 @@ function ReportInfo() {
         This process will also create future jobs — dedicated staff will review, validate, 
         and manage reports responsibly.
       </p>
+
+      {/* Demo Section */}
+      <div className="demo-section">
+        <h3>How Reports Will Be Displayed</h3>
+        <p>
+          Each report will show the name of the person, the incident type, and a 
+          <strong> validation status tag</strong> such as:
+        </p>
+        <ul>
+          <li><span className="tag confirmed">Confirmed</span> – validated through official channels</li>
+          <li><span className="tag pending">Pending</span> – awaiting review</li>
+          <li><span className="tag flagged">Flagged</span> – under dispute or investigation</li>
+        </ul>
+
+        <p>
+          This demonstration shows how reports will appear once the system is live. 
+          Tags make it clear whether a report is verified, pending, or flagged.
+        </p>
+
+        <h3>Anonymous Report Examples</h3>
+        <div className="demo-grid">
+           <img src="/images/Flagged anonymous re1.png" alt="Flagged anonymous report demo" />
+       </div>
+       <p>
+         These examples show how anonymous reports appear in the system. 
+         <strong>Confirmed</strong> reports are verified, 
+         <strong>Pending</strong> reports are under review, and 
+         <strong>Flagged</strong> reports require further investigation.
+       </p>
+
+      </div>
+      
+
     </div>
   );
 }
