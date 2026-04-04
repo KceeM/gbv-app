@@ -1,3 +1,10 @@
+.report-page {
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  color: #EAEAEA;
+}
+
 .report-info {
   background-color: #1E1E1E;
   color: #EAEAEA;
@@ -7,10 +14,43 @@
   box-shadow: 0 0 12px rgba(155,48,255,0.4);
 }
 
+.report-info p {
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+.report-info ul {
+  margin: 12px 0 20px;
+  padding-left: 20px;
+}
+
+.report-info li {
+  margin-bottom: 8px;
+}
+
 .report-info h3 {
   color: #CBA6F7;
   margin-bottom: 10px;
 }
+
+.report-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.report-page button {
+  margin-top: 12px;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.report-page button + button {
+  margin-left: 12px; /* spacing between buttons */
+}
+
 
 .demo-section {
   margin-top: 20px;
@@ -63,7 +103,7 @@
 }
 
 .demo-grid img {
-  width: 800px;
+  width: 800px; /* smaller cards */
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(155, 48, 255, 0.3);
 }

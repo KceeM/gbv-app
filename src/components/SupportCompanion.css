@@ -1,7 +1,9 @@
 .support-companion {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 25px;
+  right: 25px;
+  transform: scale(1.2);
+  z-index: 1000;
 }
 
 .companion-toggle {

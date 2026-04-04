@@ -9,7 +9,7 @@
 
 .report-content {
   background: #1E1E1E;
-  padding: 20px;
+  padding: 45px;
   border-radius: 10px;
   width: 320px;
   color: #EAEAEA;
@@ -46,6 +46,7 @@
   border: none;
   border-radius: 6px;
   cursor: pointer;
+  margin-right: 16px;
 }
 
 .report-content button:hover {
