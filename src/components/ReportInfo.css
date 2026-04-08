@@ -107,3 +107,49 @@
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(155, 48, 255, 0.3);
 }
+
+.report-actions {
+  display: flex;
+  justify-content: center; /* centers the button */
+  margin: 20px 0;
+}
+
+.report-actions button {
+  background: #9b30ff;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(155, 48, 255, 0.3);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.report-actions button:hover {
+  background: #b366ff;
+  transform: scale(1.05);
+}
+
+.view-more {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.view-more button {
+  background: #9b30ff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 0 8px rgba(155, 48, 255, 0.3);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.view-more button:hover {
+  background: #b366ff;
+  transform: scale(1.05);
+}

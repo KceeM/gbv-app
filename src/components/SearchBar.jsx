@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import { FaSearch, FaTimes } from "react-icons/fa"; // using react-icons
+import "./SearchBar.css";
 
-function SearchBar({ onSearch, onClear  }) {
+function SearchBar({ onSearch, onClear }) {
   const [query, setQuery] = useState("");
 
   const handleChange = (e) => {
@@ -8,10 +10,9 @@ function SearchBar({ onSearch, onClear  }) {
     setQuery(value);
 
     if (value === "") {
-      onClear(); // ✅ clears result + hasSearched when input is empty
+      onClear();
     }
   };
-
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -20,16 +21,26 @@ function SearchBar({ onSearch, onClear  }) {
     }
   };
 
+  const handleClear = () => {
+    setQuery("");
+    onClear();
+  };
 
   return (
     <form onSubmit={handleSubmit} className="search-bar">
+      <FaSearch className="search-icon" />
       <input
         type="text"
         placeholder="Search by name..."
         value={query}
         onChange={handleChange}
       />
-      <button type="submit">Search</button>
+      {query && (
+        <button type="button" className="clear-btn" onClick={handleClear}>
+          <FaTimes />
+        </button>
+      )}
+      <button type="submit" className="search-btn">Search</button>
     </form>
   );
 }

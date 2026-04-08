@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./ReportInfo.css";
 import ReportCard from "./ReportCard";
 
@@ -23,8 +23,18 @@ function ReportInfo() {
       date: "2 weeks ago",
       description: "Anonymous tip of suspicious behavior in central Durban. Monitoring situation.",
       status: "Flagged"
+    },
+    {
+      title: "Harassment in Pretoria",
+      date: "1 month ago",
+      description: "Anonymous report of workplace harassment. Under review.",
+      status: "Pending"
     }
+
   ];
+
+  const [visibleCount, setVisibleCount] = useState(3);
+
 
   return (
     <div className="report-page">
@@ -88,9 +98,9 @@ function ReportInfo() {
            <section className="report-info">
               {/* your existing guidelines code here */}
 
-              <h3>Community Reports</h3>
+              <h3>Live Community Reports</h3>
               <div className="report-list">
-                {demoReports.map((report, index) => (
+                 {demoReports.slice(0, visibleCount).map((report, index) => (
                     <ReportCard
                       key={index}
                       title={report.title}
@@ -98,8 +108,17 @@ function ReportInfo() {
                       description={report.description}
                       reportStatus={report.status}
                     />
-                 ))}
+                 ))}          
                </div>
+
+               {visibleCount < demoReports.length && (
+                 <div className="view-more">
+                   <button onClick={() => setVisibleCount(visibleCount + 2)}>
+                     View More
+                   </button>
+                </div>
+              )}
+
 
             </section>
         </div>

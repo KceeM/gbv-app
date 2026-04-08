@@ -52,7 +52,11 @@ function App() {
           <h1>GBV Registry App</h1>
           <p>Welcome to a safer future.</p>
           <WelcomeMessage />
-          <SearchBar onSearch={handleSearch} onClear={handleClearSearch}/>
+          <div className="search-container">
+            <SearchBar onSearch={handleSearch} onClear={handleClearSearch}/>
+      
+          </div>
+        
           {/* Show result card OR fallback message */}
           {result ? (
             <ResultCard record={result} onClose={() => setResult(null)} />
@@ -70,8 +74,12 @@ function App() {
         <>
           <h2>Community Reports</h2>
           <DisclaimerBanner />
+          <div className="report-actions">
+            <button onClick={() => setShowReportForm(true)}>Report an Incident</button>
+         </div>
+
           <ReportInfo />
-          <button onClick={() => setShowReportForm(true)}>Report an Incident</button>
+          
           {showReportForm && <ReportForm onClose={() => setShowReportForm(false)} />}
         </>
       )}

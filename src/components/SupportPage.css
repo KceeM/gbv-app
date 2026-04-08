@@ -29,3 +29,44 @@
   margin: 12px 0;
   box-shadow: 0 0 8px rgba(106,13,173,0.6);
 }
+
+.support-section button {
+  margin-top: 12px;
+  background: #9b30ff;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.support-section button:hover {
+  background: #b366ff;
+  transform: scale(1.05);
+}
+
+.exercise-block {
+  margin-top: 12px;
+  background: #2a2a2a;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(155, 48, 255, 0.3);
+  color: #eaeaea;
+}
+
+.support-section button {
+  margin-top: 12px;
+  background: #9b30ff;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.support-section button:hover {
+  background: #b366ff;
+  transform: scale(1.05);
+}

@@ -7,6 +7,12 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .navbar-logo {
   height: 50px;
   filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.4));
@@ -26,8 +32,6 @@
   list-style: none;
   display: flex;
   gap: 28px;
-  margin: 0;
-  padding: 0;
 }
 
 .nav-links li {
