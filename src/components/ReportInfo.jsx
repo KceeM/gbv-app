@@ -1,9 +1,34 @@
 import React from "react";
 import "./ReportInfo.css";
+import ReportCard from "./ReportCard";
+
 
 function ReportInfo() {
+
+   const demoReports = [
+    {
+      title: "Assault in Johannesburg",
+      date: "3 days ago",
+      description: "Multiple witnesses reported a violent incident near Park Station. Investigation in progress.",
+      status: "Pending"
+    },
+    {
+      title: "Domestic Violence in Cape Town",
+      date: "1 week ago",
+      description: "Neighbor heard screaming, suspected domestic abuse. Authorities notified.",
+      status: "Confirmed"
+    },
+    {
+      title: "Suspicious Activity in Durban",
+      date: "2 weeks ago",
+      description: "Anonymous tip of suspicious behavior in central Durban. Monitoring situation.",
+      status: "Flagged"
+    }
+  ];
+
   return (
     <div className="report-page">
+
         <section className="report-info">
            <h3>Reporting Guidelines</h3>
            <p>
@@ -55,11 +80,37 @@ function ReportInfo() {
                  <strong>Flagged</strong> reports require further investigation.
               </p>
            </div>
-      
 
-        </section>
-    </div>
-  );
+
+         </section>
+
+         <div className="report-page">
+           <section className="report-info">
+              {/* your existing guidelines code here */}
+
+              <h3>Community Reports</h3>
+              <div className="report-list">
+                {demoReports.map((report, index) => (
+                    <ReportCard
+                      key={index}
+                      title={report.title}
+                      date={report.date}
+                      description={report.description}
+                      reportStatus={report.status}
+                    />
+                 ))}
+               </div>
+
+            </section>
+        </div>
+
+      </div>
+
+    
+    
+   );
 }
+
+
 
 export default ReportInfo;
